@@ -1,9 +1,16 @@
 import React from 'react';
 import './styles.css';
 
-function DevItem({ dev }) {
+function DevItem({ dev, removeDev },) {
+
   return (
     <li className="dev-item">
+        <button>
+          <i className="material-icons update">drag_indicator</i>
+        </button>
+        <button>
+          <i className="material-icons garbage">delete_forever</i>
+        </button>
       <header>
         <img src={dev.avatar_url} alt={dev.name}/>
         <div className="user-info">

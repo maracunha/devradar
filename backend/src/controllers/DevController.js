@@ -11,7 +11,7 @@ module.exports = {
   },
 
   async store(req, res) {
-    const { github_username, techs, latitude, longitude } = req.body
+    const { github_username, techs, latitude, longitude } = req.body;
 
     let dev = await Dev.findOne({ github_username })
 
@@ -56,8 +56,20 @@ module.exports = {
 
   },
 
-  async destroy() {
+  async destroy(req, res) {
+     
+    const { github_username } = req.body;
+    const dev = await Dev.findOne({ github_username });
 
+    console.log(dev);
+    console.log(req.body)
+    console.log('github_username: ', github_username)
+
+    if (!dev) {
+      return res.status(404).json({ message: 'Could not find user wiht that github username'})
+    } else {
+      dev.deleteOne({ github_username });
+      return res.status(200).json({ status: 'OK'});
+    }
   },
-  
 }

@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/icon?family=Material+Icons');
+
 li.dev-item {
   background: #FFF;
   box-shadow: 0 0 14px 0 rgba(0, 0, 0, 0.02);
@@ -45,4 +47,22 @@ li.dev-item a {
   color: #8e4dff;
   font: 14px;
   text-decoration: none;
+}
+
+button {
+  float: right;
+  margin: 0px 2px;
+  border: 0 none;
+  color: #757575;
+  background-color: #FFF;
+}
+
+.material-icons.garbage:hover {
+  background-color: lightcoral;
+  color: #FFF;
+}
+
+.material-icons.update:hover {
+  background-color: lightblue;
+  color: #FFF;
 }
