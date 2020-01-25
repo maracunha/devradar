@@ -3,7 +3,7 @@ const mongoose = require('mongoose');
 const cors = require('cors');
 const http = require('http');
 
-mongoose.connect('mongodb+srv://<username>:<password>@omnistack-krsol.mongodb.net/week10?retryWrites=true&w=majority', {
+mongoose.connect('mongodb+srv://re235:PxVENXg2u67VHpMA@omnistack-krsol.mongodb.net/week10?retryWrites=true&w=majority', {
     useUnifiedTopology: true,
     useNewUrlParser: true
 });
